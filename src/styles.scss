@@ -1,20 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  background-color: #212121;
+}
 body {
   font-family: Lato, serif;
   font-weight: 300;
+  font-size: 1.2rem;
+  color: #fafafa;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h1, h2, h3 {
   margin: 1.5rem 0 .5rem;
-  border-bottom: 1px dotted #aaa;
+  font-weight: 300;
   &:first-child {
     margin-top: 0;
   }
 }
 p {
-  margin: .5rem 0 0;
+  margin: .5rem 0;
 }
 
 pre, code {
   font-family: 'Operator Mono', monospace;
+}
+
+.menu {
+  border-bottom: 1px solid #666;
+  margin-bottom: 1rem;
+  a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
 }
