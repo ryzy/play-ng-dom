@@ -1,17 +1,17 @@
 import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 
 @Component({
-  selector: 'app-haha',
+  selector: 'app-peaches',
   template: `
-    <span class="root-app-haha">app-haha</span>
+    <h4>app-peaches</h4>
   `,
   styles: [`
     :host {
-      border: 1px dotted cadetblue;
+      border: 1px dotted orangered;
     }
   `]
 })
-export class HahaComponent implements OnInit {
+export class PeachesComponent implements OnInit {
 
   @Input()
   public info: string = '';
@@ -19,6 +19,6 @@ export class HahaComponent implements OnInit {
   constructor(private thisVc: ViewContainerRef) { }
 
   ngOnInit() {
-    console.log('[HaHa]', this);
+    console.log('[PeachesComponent]', this);
   }
 }

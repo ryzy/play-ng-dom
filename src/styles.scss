@@ -11,14 +11,24 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  &.active {
+    font-weight: 400;
+  }
+}
+b, strong {
+  font-weight: 400;
 }
 
 h1, h2, h3 {
   margin: 1.5rem 0 .5rem;
-  font-weight: 300;
+  font-weight: 400;
   &:first-child {
     margin-top: 0;
   }
+}
+h4, h5 {
+  margin: .5rem 0 .5rem;
+  font-weight: 400;
 }
 p {
   margin: .5rem 0;

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Input, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
-import { HahaComponent } from '../components/haha.component';
+import { BerriesComponent } from '../components/berries.component';
 
 @Component({
   selector: 'app-query-playground',
@@ -13,7 +13,7 @@ import { HahaComponent } from '../components/haha.component';
 export class QueryPlaygroundComponent implements OnInit, AfterViewInit {
 
   @Input() public tplForViewChildren: TemplateRef<any>;
-  @ViewChild(HahaComponent) hahaCmp: HahaComponent;
+  @ViewChild(BerriesComponent) hahaCmp: BerriesComponent;
   @ViewChild('ngContainer', { read: ViewContainerRef }) ngContainer: ViewContainerRef;
 
   public constructor(private vc: ViewContainerRef) {

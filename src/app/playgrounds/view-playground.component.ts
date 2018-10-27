@@ -10,8 +10,8 @@ import {
   ViewContainerRef,
   ViewRef
 } from '@angular/core';
-import { BlaBlaComponent } from '../components/bla-bla.component';
-import { HahaComponent } from '../components/haha.component';
+import { CiderComponent } from '../components/cider.component';
+import { BerriesComponent } from '../components/berries.component';
 
 
 @Component({
@@ -33,7 +33,7 @@ import { HahaComponent } from '../components/haha.component';
     <ng-container #ngContainer><code>#ngContainer content</code></ng-container>
 
     <div data-info="app-bla-bla in the html code">
-      <!--<app-bla-bla #cmp></app-bla-bla>-->
+      <app-cider #cmp></app-cider>
     </div>
   `,
   styles: [`
@@ -50,7 +50,7 @@ export class ViewPlaygroundComponent implements OnInit, AfterViewInit {
   @ViewChild('div') div: ElementRef<HTMLElement>;
   @ViewChild('div', { read: ViewContainerRef}) divVc: ViewContainerRef;
 
-  @ViewChild('cmp') cmp: BlaBlaComponent;
+  @ViewChild('cmp') cmp: CiderComponent;
   @ViewChild('cmp', { read: ViewContainerRef}) cmpVc: ViewContainerRef;
 
   @ViewChildren('divInsideTemplate') divInsideTemplate: ElementRef;
@@ -58,8 +58,8 @@ export class ViewPlaygroundComponent implements OnInit, AfterViewInit {
   @ViewChild('ngContainer') ngContainer: ElementRef<Comment>;
   @ViewChild('ngContainer', { read: ViewContainerRef}) ngContainerVc: ViewContainerRef;
 
-  @ViewChildren(BlaBlaComponent) blaBlaComponents: QueryList<BlaBlaComponent>;
-  @ViewChildren(HahaComponent) hahaComponents: QueryList<HahaComponent>;
+  @ViewChildren(CiderComponent) blaBlaComponents: QueryList<CiderComponent>;
+  @ViewChildren(BerriesComponent) hahaComponents: QueryList<BerriesComponent>;
 
   constructor(
     private thisVc: ViewWhichContainsThisComponent,
@@ -86,7 +86,7 @@ export class ViewPlaygroundComponent implements OnInit, AfterViewInit {
     // const embeddedView = this.thisVc.createEmbeddedView(this.tpl, { someVar: 'ViewPlayground vc.createEmbeddedView' });
     // console.log('[ViewPlayground] EmbeddedViewRef created via ViewContainerRef', embeddedView);
 
-    const cf = this.cfr.resolveComponentFactory(HahaComponent);
+    const cf = this.cfr.resolveComponentFactory(BerriesComponent);
     const cmpRef = this.thisVc.createComponent(cf);
     // console.log('[ViewPlayground] Haha cmp factory, already inserted into ViewContainerRef', { 'Haha component factory': cf, 'Haha component ref': cmpRef } );
 
@@ -103,7 +103,7 @@ export class ViewPlaygroundComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // this.blaBlaComponents.changes.subscribe(v => console.log('blaBlaComponents', v));
 
-    // const cf = this.cfr.resolveComponentFactory(BlaBlaComponent);
+    // const cf = this.cfr.resolveComponentFactory(CiderComponent);
     // this.cmpVc.createComponent(cf);
 
     // console.log('this.blaBlaComponents', this.blaBlaComponents);

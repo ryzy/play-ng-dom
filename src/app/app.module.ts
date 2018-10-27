@@ -5,14 +5,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NgTemplatePlaygroundComponent } from './playgrounds/ng-template-playground.component';
 import { ViewPlaygroundComponent } from './playgrounds/view-playground.component';
-import { BlaBlaComponent } from './components/bla-bla.component';
-import { HahaComponent } from './components/haha.component';
+import { CiderComponent } from './components/cider.component';
+import { BerriesComponent } from './components/berries.component';
 import { QueryPlaygroundComponent } from './playgrounds/query-playground.component';
+import { ViewContainerPlaygroundComponent } from './playgrounds/view-container-playground.component';
+import { PeachesComponent } from './components/peaches.component';
 
 const routes: Routes = [
   {
     path: 'view',
     component: ViewPlaygroundComponent,
+  },
+  {
+    path: 'vc',
+    component: ViewContainerPlaygroundComponent,
   },
   {
     path: 'query',
@@ -31,15 +37,18 @@ const routes: Routes = [
   ],
   declarations: [
     AppComponent,
+    CiderComponent,
+    BerriesComponent,
+    PeachesComponent,
     NgTemplatePlaygroundComponent,
     ViewPlaygroundComponent,
-    BlaBlaComponent,
-    HahaComponent,
     QueryPlaygroundComponent,
+    ViewContainerPlaygroundComponent,
   ],
   entryComponents: [
-    BlaBlaComponent,
-    HahaComponent,
+    CiderComponent,
+    BerriesComponent,
+    PeachesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
