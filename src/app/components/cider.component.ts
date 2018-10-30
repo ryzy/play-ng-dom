@@ -21,7 +21,7 @@ export class CiderComponent implements OnInit {
   constructor(private thisVc: ViewWhichContainsThisComponent) { }
 
   ngOnInit() {
-    // console.log('[CiderComponent]', this);
+    console.log('[CiderComponent]', this);
   }
 
 }

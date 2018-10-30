@@ -10,6 +10,9 @@ import { BerriesComponent } from './components/berries.component';
 import { QueryPlaygroundComponent } from './playgrounds/query-playground.component';
 import { ViewContainerPlaygroundComponent } from './playgrounds/view-container-playground.component';
 import { PeachesComponent } from './components/peaches.component';
+import { DirectivePlaygroundComponent } from './playgrounds/directive-playground.component';
+import { SpiceUpDirective } from './directives/spice-up.directive';
+import { BrewDirective } from './directives/brew.directive';
 
 const routes: Routes = [
   {
@@ -23,6 +26,10 @@ const routes: Routes = [
   {
     path: 'query',
     component: QueryPlaygroundComponent,
+  },
+  {
+    path: 'directive',
+    component: DirectivePlaygroundComponent,
   },
   {
     path: 'tpl',
@@ -43,7 +50,10 @@ const routes: Routes = [
     NgTemplatePlaygroundComponent,
     ViewPlaygroundComponent,
     QueryPlaygroundComponent,
+    DirectivePlaygroundComponent,
     ViewContainerPlaygroundComponent,
+    BrewDirective,
+    SpiceUpDirective,
   ],
   entryComponents: [
     CiderComponent,

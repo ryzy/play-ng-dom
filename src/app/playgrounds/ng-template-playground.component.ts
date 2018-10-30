@@ -12,9 +12,11 @@ import {
 @Component({
   selector: 'app-ng-template-playground',
   template: `
-    <ng-template #tplEmpty></ng-template>
     <ng-template #tplWithContent><code>ng-template #tplWithContent</code></ng-template>
     <div #tplRefVarOnHtmlElement>DIV with <code>#tplRefVarOnHtmlElement</code></div>
+    <ng-template #tplSimple><p>Simple template</p></ng-template>
+    <div>Regular DIV</div>
+    <ng-container *ngTemplateOutlet="tplSimple"></ng-container>
   `,
   styles: []
 })

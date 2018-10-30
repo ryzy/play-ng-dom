@@ -3,7 +3,7 @@ import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 @Component({
   selector: 'app-berries',
   template: `
-    <h4>app-berries</h4>
+    <h4 *ngIf="1 === 1">app-berries</h4>
   `,
   styles: [`
     :host {

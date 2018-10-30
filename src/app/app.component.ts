@@ -9,6 +9,7 @@ import { Component, ViewContainerRef } from '@angular/core';
       <a routerLink="/view" routerLinkActive="active">View</a>
       <a routerLink="/vc" routerLinkActive="active">View Container</a>
       <a routerLink="/query" routerLinkActive="active">View Query API</a>
+      <a routerLink="/directive" routerLinkActive="active">Directive</a>
       <a routerLink="/tpl" routerLinkActive="active">ng-template</a>
     </div>
     

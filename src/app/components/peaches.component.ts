@@ -7,6 +7,7 @@ import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
   `,
   styles: [`
     :host {
+      display: block;
       border: 1px dotted orangered;
     }
   `]
@@ -16,7 +17,7 @@ export class PeachesComponent implements OnInit {
   @Input()
   public info: string = '';
 
-  constructor(private thisVc: ViewContainerRef) { }
+  constructor(private vc: ViewContainerRef) { }
 
   ngOnInit() {
     console.log('[PeachesComponent]', this);
